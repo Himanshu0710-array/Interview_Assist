@@ -101,7 +101,7 @@ export default function PopupFloatingPanel() {
       onError: (err) => {
         // Make quota error friendlier
         const msg = err.includes('quota') || err.includes('RESOURCE_EXHAUSTED')
-          ? 'Free tier quota exceeded. Open ⚙️ Settings → switch to gemini-1.5-flash or add a paid key.'
+          ? 'Free tier quota exceeded. Open ⚙️ Settings → switch to gemini-2.0-flash or add a paid key.'
           : err;
         setLastError(msg);
         setStreamingText('');
