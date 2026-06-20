@@ -1,72 +1,77 @@
 <div align="center">
-  <img src="public/favicon.svg" alt="Logo" width="80" height="80">
-  <h1 align="center">Interview AI</h1>
-  <p align="center">
-    <strong>A stealthy, real-time AI interview copilot built with React, Electron, and Gemini 2.0 Flash.</strong>
+  <img src="public/favicon.svg" alt="Logo" width="72" height="72">
+  <h1>Interview AI</h1>
+  <p><strong>A stealthy, real-time AI interview copilot built with React, Electron, and Gemini 2.0 Flash.</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/Electron-Desktop-blue?style=flat-square&logo=electron" />
+    <img src="https://img.shields.io/badge/Gemini%202.0-Flash-orange?style=flat-square&logo=google" />
+    <img src="https://img.shields.io/badge/Vercel-Deployed-black?style=flat-square&logo=vercel" />
+    <img src="https://img.shields.io/badge/Stealth-Screen%20Share%20Proof-green?style=flat-square" />
   </p>
 </div>
 
-<br />
+---
 
-Interview AI is a powerful assistant designed to help you ace technical interviews. It actively listens to your interviewer, detects questions, and streams highly accurate, formatting-rich answers directly to a floating transparent widget on your screen.
+Interview AI listens to your interviewer in real time, detects questions, and streams formatted answers to a floating transparent widget — completely invisible to screen-sharing software.
 
 ---
 
 ## ✨ Features
 
-- **🎙️ Real-Time Speech Recognition**: Seamlessly captures interviewer audio and automatically detects incoming questions without manual input.
-- **⚡ Gemini 2.0 Flash Integration**: Streams blazing-fast, intelligent answers using Google's latest multimodal AI. Answers are beautifully formatted with bullet points and syntax-highlighted code blocks.
-- **🥷 Stealth Desktop Mode (Electron)**: Ships with a native Windows application wrapper that creates a **100% transparent, glass-like widget**. Using OS-level APIs, the widget is completely invisible to screen-sharing software like Google Meet and Zoom.
-- **🌐 Web-Ready (Vercel)**: Fully configured to deploy as a standard web application with a Picture-in-Picture (PiP) mode for users who prefer a zero-install browser experience.
-- **🎨 Glassmorphism UI**: Features a sleek, modern light-theme UI that blends right into your desktop environment.
+- 🎙️ **Real-time speech recognition** — detects questions automatically, no manual input needed
+- ⚡ **Gemini 2.0 Flash** — blazing-fast streamed answers with bullet points and syntax-highlighted code
+- 🥷 **Stealth desktop mode** — OS-level transparent window, physically impossible for Zoom or Meet to capture
+- 🌐 **Web-ready** — deploy to Vercel in one click with Picture-in-Picture browser mode
+- 🎨 **Glassmorphism UI** — sleek, minimal design that blends into your desktop
 
 ---
 
-## 🚀 Two Ways to Use
+## 🚀 Two Ways to Run It
 
-Depending on your needs, you can run Interview AI in two different modes:
+### 🖥️ Desktop App — Stealth Mode (Recommended)
 
-### 1. The "Stealth" Desktop App (Recommended)
-This mode provides a completely transparent window that hovers over your video call. **It is physically impossible for screen-sharing software to capture this window** (even if you share your entire screen).
-*Note: Due to Google's restrictions on desktop apps, the automatic microphone feature is disabled in this mode. You will need to manually type keywords to get answers.*
+A fully transparent floating window that hovers over your video call. Screen-sharing software **cannot capture it**, even if you share your entire screen.
 
-**To run Desktop mode locally:**
+> ⚠️ Due to Google's restrictions, the microphone feature is disabled in desktop mode. Use manual keyword input instead.
+
 ```bash
 npm install
 npm start
 ```
 
-### 2. The Web Browser Mode
-If you prefer the AI to **automatically listen** to the interviewer via your microphone, you must run the app in your Chrome browser. 
-*Note: Browser popups cannot be truly transparent. You must be careful to only share the "Meet Tab" so the popup isn't caught on the screen share.*
+### 🌐 Web Mode — Auto Listen
 
-**To run Web mode locally:**
+Runs in Chrome and **automatically listens** to the interviewer via your microphone. Deploy to Vercel for a zero-install experience.
+
+> ⚠️ Browser popups aren't truly transparent — only share the "Meet Tab" to keep the popup off your screen share.
+
 ```bash
 npm install
 npm run dev
 ```
-*(Or simply visit your deployed Vercel URL!)*
 
 ---
 
-## 🛠️ Setup & Installation
+## 🛠️ Setup
 
-1. **Clone the repository:**
+**1. Clone the repo**
 ```bash
 git clone https://github.com/Himanshu0710-array/Interview_Assist.git
 cd Interview_Assist
 ```
 
-2. **Install dependencies:**
+**2. Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Add your Gemini API Key:**
-Open the app (either desktop or web), click the **⚙️ Settings** icon, and paste your free Google Gemini API key.
+**3. Add your Gemini API key**
 
-4. **Deploy to Vercel (Optional):**
-Click "Add New Project" in Vercel, import this GitHub repository, and click Deploy. Vercel will automatically handle the build process!
+Open the app → click the ⚙️ Settings icon → paste your free [Google Gemini API key](https://makersuite.google.com/app/apikey)
+
+**4. Deploy to Vercel (optional)**
+
+Import the GitHub repo in Vercel and click Deploy — it handles everything automatically.
 
 ---
 
