@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useCallback } from 'react';
 
 const AppContext = createContext(null);
 
-const VALID_GEMINI = ['gemini-2.0-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash', 'gemini-1.5-pro'];
+const VALID_GEMINI = ['gemini-2.0-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash-latest', 'gemini-1.5-pro-latest'];
 const VALID_OPENAI = ['gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo'];
 
 const DEFAULT_SETTINGS = {
@@ -16,9 +16,10 @@ const DEFAULT_SETTINGS = {
 
 function migrateSettings(s) {
   if (!s) return DEFAULT_SETTINGS;
-  // Fix invalid Gemini models
-  if (s.provider === 'gemini' && !VALID_GEMINI.includes(s.model)) {
-    return { ...s, model: 'gemini-2.0-flash' };
+  if (s.provider === 'gemini') {
+    if (s.model === 'gemini-1.5-flash') return { ...s, model: 'gemini-1.5-flash-latest' };
+    if (s.model === 'gemini-1.5-pro') return { ...s, model: 'gemini-1.5-pro-latest' };
+    if (!VALID_GEMINI.includes(s.model)) return { ...s, model: 'gemini-2.0-flash' };
   }
   // Fix invalid OpenAI models
   if (s.provider === 'openai' && !VALID_OPENAI.includes(s.model)) {

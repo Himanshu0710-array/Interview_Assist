@@ -10,8 +10,8 @@ const OPENAI_MODELS = [
 const GEMINI_MODELS = [
   { id: 'gemini-2.0-flash', label: 'Gemini 2.0 Flash ⚡ (Recommended)' },
   { id: 'gemini-2.0-flash-lite', label: 'Gemini 2.0 Flash Lite (Free tier)' },
-  { id: 'gemini-1.5-flash', label: 'Gemini 1.5 Flash' },
-  { id: 'gemini-1.5-pro', label: 'Gemini 1.5 Pro' },
+  { id: 'gemini-1.5-flash-latest', label: 'Gemini 1.5 Flash' },
+  { id: 'gemini-1.5-pro-latest', label: 'Gemini 1.5 Pro' },
 ];
 
 const LANGUAGES = ['javascript', 'python', 'java', 'cpp', 'typescript', 'go', 'rust', 'sql'];
