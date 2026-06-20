@@ -152,6 +152,19 @@ export default function PopupFloatingPanel() {
     return () => window.removeEventListener('keydown', h);
   }, []);
 
+  // Handle hiding and window resizing for both browser and Electron
+  useEffect(() => {
+    try {
+      if (isHidden) {
+        window.resizeTo(220, 80);
+      } else {
+        window.resizeTo(395, 630);
+      }
+    } catch (e) {
+      // Ignore if browser blocks resize
+    }
+  }, [isHidden]);
+
   // Minimized / hidden bar
   if (isHidden) {
     return (

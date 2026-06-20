@@ -3,11 +3,13 @@ import path from 'path';
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 400,
-    height: 650,
+    width: 360,
+    height: 540,
     transparent: true,    // This makes the window fully transparent!
     frame: false,         // Removes the Windows title bar for a floating look
     alwaysOnTop: true,    // Keeps it above Meet at all times
+    maximizable: false,   // Prevents accidental full-screen which blocks all clicks
+    fullscreenable: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
