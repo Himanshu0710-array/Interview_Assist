@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useCallback } from 'react';
 
 const AppContext = createContext(null);
 
-const VALID_GEMINI = ['gemini-2.0-flash', 'gemini-2.0-flash-lite'];
+const VALID_GEMINI = ['gemini-2.0-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash', 'gemini-1.5-pro'];
 const VALID_OPENAI = ['gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo'];
 
 const DEFAULT_SETTINGS = {

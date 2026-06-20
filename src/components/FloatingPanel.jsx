@@ -47,7 +47,10 @@ export default function FloatingPanel() {
         setNewAnswerCount(c => c + 1);
       },
       onError: (err) => {
-        setLastError(err);
+        const msg = err.includes('quota') || err.includes('RESOURCE_EXHAUSTED') || err.includes('limit: 0')
+          ? 'Free tier quota exceeded. Open ⚙️ Settings → switch to a different model (like gemini-1.5-flash) or add a paid key.'
+          : err;
+        setLastError(msg);
         setStreamingText('');
         setIsGenerating(false);
       },
